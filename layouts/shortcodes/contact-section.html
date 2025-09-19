@@ -1,0 +1,282 @@
+{{ $title := .Get "title" }}
+{{ $contact_form_name := .Get "contact_form_name" }}
+{{ $contact_form_email := .Get "contact_form_email" }}
+{{ $contact_form_message := .Get "contact_form_message" }}
+{{ $contact_button := .Get "contact_button" }}
+{{ $contact_phone_title := .Get "contact_phone_title" }}
+{{ $contact_phone_number := .Get "contact_phone_number" }}
+{{ $contact_email_title := .Get "contact_email_title" }}
+{{ $contact_email_email := .Get "contact_email_email" }}
+{{ $contact_address_title := .Get "contact_address_title" }}
+{{ $contact_address_address := .Get "contact_address_address" }}
+{{ $form_action := .Get "form_action" }}
+{{ $form_method := .Get "form_method" }}
+{{ $sectionId := .Get "sectionId" }}
+<section id="{{ $sectionId }}" class="section rad-animation-group pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section__title text-center">{{ $title }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="contact-info">
+          <h3>{{ $contact_phone_title }}</h3>
+          <p>{{ $contact_phone_number | safeHTML }}</p>
+          
+          <h3>{{ $contact_email_title }}</h3>
+          <p>{{ $contact_email_email | safeHTML }}</p>
+          
+          <h3>{{ $contact_address_title }}</h3>
+          <p>{{ $contact_address_address | safeHTML }}</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <form action="{{ $form_action }}" method="{{ $form_method }}" class="contact-form" id="contact-form">
+          <input type="hidden" name="access_key" id="web3forms-access-key" value="">
+          <input type="hidden" name="subject" value="STASER Lab Contact Form">
+          <input type="hidden" name="from_name" value="STASER Lab Website">
+          <input type="hidden" name="redirect" value="https://staser-lab.ubc.ca/thank-you">
+          
+        <label for="email">{{ i18n "form_email" }}</label>
+<input type="email" name="email" id="email" class="form-control" required>
+
+<label for="message">{{ i18n "form_message" }}</label>
+<textarea name="message" id="message" class="form-control" rows="5" required></textarea>
+
+<button type="submit" class="btn btn-primary">{{ i18n "form_submit" }}</button>
+
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.contact-info h3 {
+  color: #478079;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-info h3:first-child {
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form .form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+}
+
+.contact-form .form-control:focus {
+  outline: none;
+  border-color: #478079;
+  box-shadow: 0 0 0 2px rgba(71, 128, 121, 0.2);
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+}
+
+.contact-form .btn {
+  background-color: #478079;
+  border: none;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: #3a6b65;
+}
+
+[data-theme="dark"] .contact-info h3 {
+  color: #4fd1c7;
+}
+
+[data-theme="dark"] .contact-form label {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .contact-form .form-control {
+  background-color: #ffffff !important;
+  border-color: #4fd1c7;
+  color: #1a202c !important;
+  font-weight: 500;
+}
+
+[data-theme="dark"] .contact-form .form-control:focus {
+  border-color: #00ffd4;
+  box-shadow: 0 0 0 3px rgba(0, 255, 212, 0.4);
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+}
+
+[data-theme="dark"] .contact-form .btn {
+  background-color: #4fd1c7;
+  color: #1a202c;
+}
+
+/* Force white background for all form controls in all themes */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form .form-control {
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+  border: 1px solid #ddd !important;
+}
+
+[data-theme="dark"] .contact-form input[type="text"],
+[data-theme="dark"] .contact-form input[type="email"],
+[data-theme="dark"] .contact-form textarea,
+[data-theme="dark"] .contact-form .form-control {
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+  border: 1px solid #4fd1c7 !important;
+}
+
+/* Additional specificity for form fields */
+.contact-section .contact-form input[type="text"],
+.contact-section .contact-form input[type="email"],
+.contact-section .contact-form textarea,
+.contact-section .contact-form .form-control {
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+}
+
+[data-theme="dark"] .contact-section .contact-form input[type="text"],
+[data-theme="dark"] .contact-section .contact-form input[type="email"],
+[data-theme="dark"] .contact-section .contact-form textarea,
+[data-theme="dark"] .contact-section .contact-form .form-control {
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+  border: 1px solid #4fd1c7 !important;
+}
+
+/* Placeholder text styling */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #666666 !important;
+}
+
+/* Ultra-specific form field styling to override any theme conflicts */
+body .contact-section .contact-form .form-group input,
+body .contact-section .contact-form .form-group textarea,
+body .contact-section .contact-form .form-group .form-control {
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+  border: 1px solid #ddd !important;
+}
+
+body[data-theme="dark"] .contact-section .contact-form .form-group input,
+body[data-theme="dark"] .contact-section .contact-form .form-group textarea,
+body[data-theme="dark"] .contact-section .contact-form .form-group .form-control {
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+  border: 1px solid #4fd1c7 !important;
+}
+
+/* Force white background on all input elements */
+input[type="text"], input[type="email"], textarea {
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+}
+
+[data-theme="dark"] input[type="text"], 
+[data-theme="dark"] input[type="email"], 
+[data-theme="dark"] textarea {
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+  border: 1px solid #4fd1c7 !important;
+}
+  opacity: 1;
+}
+
+[data-theme="dark"] .contact-form input::placeholder,
+[data-theme="dark"] .contact-form textarea::placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+/* Webkit placeholder styling */
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+[data-theme="dark"] .contact-form input::-webkit-input-placeholder,
+[data-theme="dark"] .contact-form textarea::-webkit-input-placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+/* Mozilla placeholder styling */
+.contact-form input::-moz-placeholder,
+.contact-form textarea::-moz-placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+[data-theme="dark"] .contact-form input::-moz-placeholder,
+[data-theme="dark"] .contact-form textarea::-moz-placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+/* MS Edge placeholder styling */
+.contact-form input::-ms-input-placeholder,
+.contact-form textarea::-ms-input-placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+[data-theme="dark"] .contact-form input::-ms-input-placeholder,
+[data-theme="dark"] .contact-form textarea::-ms-input-placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+[data-theme="dark"] .contact-form .btn:hover {
+  background-color: #38b2ac;
+}
+</style>
+
+<script>
+// Load the contact form handler
+(function() {
+  // Create script element to load contact-form.js
+  const script = document.createElement('script');
+  script.src = '{{ "js/contact-form.js" | relURL }}';
+  script.async = true;
+  document.head.appendChild(script);
+})();
+</script>

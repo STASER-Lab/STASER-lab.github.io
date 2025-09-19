@@ -1,0 +1,90 @@
+## Meta tags
+- id: "meta_title"
+  translation: "Laboratoire STASER"
+- id: "meta_description"
+  translation: "Aspects socio-techniques de l’ingénierie logicielle (STASER Lab) à UBC Okanagan"
+- id: "meta_keywords"
+  translation: "STEM, staser, gema rodriguez-perez, laboratoire, portfolio, recherche, ingénierie logicielle, socio-technique, ubc okanagan"
+- id: "meta_author"
+  translation: "Gema Rodríguez-Pérez"
+
+
+## Header
+- id: "logo_alt"
+  translation: "Logo du Laboratoire STASER"
+- id: "logo_text1"
+  translation: ""
+- id: "logo_text2"
+  translation: ""
+
+## General
+- id: "skipToMainContent"
+  translation: "Aller au contenu principal"
+- id: "toggle_navigation"
+  translation: "Basculer la navigation"
+
+## Footer
+- id: "footer_notice"
+  translation: "© Laboratoire STASER, UBC Okanagan"
+- id: "language"
+  translation: "Langue"
+- id: "toggle_theme"
+  translation: "Changer de thème"
+- id: "theme_light"
+  translation: "☀️ Clair"
+- id: "theme_dark"
+  translation: "🌑 Sombre"
+- id: "theme_auto"
+  translation: "✨ Auto"
+
+## Homepage head title
+- id: "head_title"
+  translation: "Laboratoire STASER - Aspects socio-techniques de l’ingénierie logicielle"
+- id: "head_description"
+  translation: "Ceci est le site du Laboratoire STASER à UBC Okanagan."
+
+## Blog
+- id: "read_more"
+  translation: "Lire plus"
+- id: "published_on"
+  translation: "Publié le "
+- id: "continue_reading"
+  translation: "Continuer la lecture"
+
+## 404 Page
+- id: "404_title"
+  translation: "Page non trouvée"
+- id: "404_description"  
+  translation: "Désolé, mais la page que vous cherchez est introuvable."
+- id: "404_button"
+  translation: "Retour à l’accueil"
+
+## Contact Form   
+- id: "contact_title"
+  translation: "Contact — Laboratoire STASER"
+
+- id: "form_name"
+  translation: "Votre nom"
+- id: "form_name_placeholder"
+  translation: "Jeanne Dupont"
+
+- id: "form_email"
+  translation: "Votre e-mail"
+- id: "form_email_placeholder"
+  translation: "vous@exemple.com"
+
+- id: "form_message"
+  translation: "Votre message"
+- id: "form_message_placeholder"
+  translation: "Comment pouvons-nous collaborer ?"
+
+- id: "form_submit"
+  translation: "Envoyer"
+
+- id: "form_subject_default"
+  translation: "Nouveau message du site du Laboratoire STASER"
+- id: "form_success_message"
+  translation: "Merci ! Votre message a été envoyé avec succès."
+- id: "form_error_message"
+  translation: "Oups ! Une erreur s'est produite. Veuillez réessayer plus tard."
+

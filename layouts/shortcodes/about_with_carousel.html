@@ -1,0 +1,51 @@
+{{/* layouts/shortcodes/about_with_carousel.html
+
+Usage:
+  {{< about_with_carousel
+      id="about"
+      title="Socio Technical Aspects of Software EngineERing"
+      description="Your paragraph…"
+      images="/images/group-photos/lab-fall-2024-group-photo.jpeg,/images/group-photos/dr.gema-vs-manaal.jpg,/images/group-photos/staser-lab-banner.png,/images/group-photos/staser-lab-banner-two.png"
+      ratio="4x3"
+      interval="3000"
+      indicators="true"
+      controls="true"
+      mt="mt-4"            # Bootstrap spacing below the navbar (change to mt-5 if you want more)
+  >}}{{< /about_with_carousel >}}
+
+  OR use page resources:
+  {{< about_with_carousel id="about" title="…" description="…" match="group-photos/*" ratio="16x9" mt="mt-5" >}}
+*/}}
+
+{{ $id          := .Get "id" | default "about" }}
+{{ $title       := .Get "title" | default "About" }}
+{{ $description := .Get "description" | default "" }}
+{{ $ratio       := .Get "ratio" | default "4x3" }}
+{{ $interval    := .Get "interval" | default "4000" }}
+{{ $indicators  := .Get "indicators" | default "true" }}
+{{ $controls    := .Get "controls" | default "true" }}
+{{ $images      := .Get "images" | default "" }}
+{{ $match       := .Get "match" | default "" }}
+{{ $mtClass     := .Get "mt" | default "mt-4" }}  {{/* spacing under the fixed navbar */}}
+
+<section id="{{ $id }}" class="section section--border-bottom {{ $mtClass }}">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-md-7">
+        <h2 class="section__title">{{ $title }}</h2>
+        <div class="lead">{{ $description | safeHTML }}</div>
+        {{ if .Inner }}
+          <div class="mt-3">{{ .Inner }}</div>
+        {{ end }}
+      </div>
+
+      <div class="col-12 col-md-5">
+        {{ if $images }}
+          {{ .Page.RenderString (printf "{{< carousel_bs id=\"%s-carousel\" images=\"%s\" ratio=\"%s\" interval=\"%s\" indicators=\"%s\" controls=\"%s\" >}}" $id $images $ratio $interval $indicators $controls) }}
+        {{ else if $match }}
+          {{ .Page.RenderString (printf "{{< carousel_bs id=\"%s-carousel\" match=\"%s\" ratio=\"%s\" interval=\"%s\" indicators=\"%s\" controls=\"%s\" >}}" $id $match $ratio $interval $indicators $controls) }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

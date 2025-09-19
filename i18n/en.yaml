@@ -1,0 +1,95 @@
+## Meta tags
+- id: "meta_title"
+  translation: "STASER Lab"
+- id: "meta_description"
+  translation: "Socio Technical Aspects of Software EngineERing (STASER Lab) at UBC Okanagan"
+- id: "meta_keywords"
+  translation: "STEM, staser, gema rodriguez-perez, lab site, portfolio, research, software engineering, socio-technical, ubc okanagan"
+- id: "meta_author"
+  translation: "Gema Rodríguez-Pérez"
+
+
+## Header
+
+- id: "logo_alt"
+  translation: "STASER LAB logo"
+
+- id: "logo_text1"
+  translation: ""
+
+- id: "logo_text2"
+  translation: ""
+
+## General
+- id: "skipToMainContent"
+  translation: "Skip to main content"
+
+- id: "toggle_navigation"
+  translation: "Toggle navigation"
+
+## Footer
+- id: "footer_notice"
+  translation: "© STASER LAB, UBC Okanagan"
+
+- id: "language"
+  translation: "Language"
+
+- id: "toggle_theme"
+  translation: "Toggle theme"
+
+- id: "theme_light"
+  translation: "☀️ Light"
+- id: "theme_dark"
+  translation: "🌑 Dark"
+- id: "theme_auto"
+  translation: "✨ Auto"
+
+## Homepage head title
+- id: "head_title"
+  translation: "STASER Lab - Socio Technical Aspects of Software EngineERing"
+
+- id: "head_description"
+  translation: "This is the lab website for the Socio Technical Aspects of Software EngineERing (STASER Lab) at UBC Okanagan."
+
+
+## Blog
+- id: "read_more"
+  translation: "Read more"
+
+- id: "published_on"
+  translation: "Published on "
+
+- id: "continue_reading"
+  translation: "Continue reading"
+
+## 404 Page
+- id: "404_title"
+  translation: "Page not found"
+- id: "404_description"  
+  translation: "Sorry, but the page you were looking for could not be found."
+- id: "404_button"
+  translation: "Back to homepage"
+
+## Contact Form
+- id: "contact_title"
+  translation: "Contact STASER Lab"
+- id: "form_name"
+  translation: "Your name"
+- id: "form_name_placeholder"
+  translation: "Jane Doe"
+- id: "form_email"
+  translation: "Your email"
+- id: "form_email_placeholder"
+  translation: "you@example.com"
+- id: "form_message"
+  translation: "Your message"
+- id: "form_message_placeholder"
+  translation: "How can we collaborate?"
+- id: "form_submit"
+  translation: "Send"
+- id: "form_success_message"
+  translation: "Thank you! Your message has been sent successfully."
+- id: "form_error_message"
+  translation: "Oops! Something went wrong. Please try again later."
+
+

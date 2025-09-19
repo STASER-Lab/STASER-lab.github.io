@@ -1,0 +1,74 @@
+{{/* layouts/shortcodes/carousel_bs.html
+
+Usage:
+  CSV list of images (under /static/images/...):
+    {{< carousel_bs id="aboutCarousel" ratio="4x3" interval="3000" indicators="true" controls="true"
+         images="/images/a.jpg,/images/b.jpg,/images/c.jpg" >}}
+
+  OR from Page Resources (put images inside the page bundle and match them):
+    {{< carousel_bs id="proj1" match="slides/*.jpg" ratio="16x9" indicators="true" >}}
+*/}}
+
+{{ $id         := .Get "id" | default (printf "carousel-%x" (now.UnixNano)) }}
+{{ $interval   := .Get "interval" | default "5000" }}
+{{ $indicators := eq (.Get "indicators") "true" }}
+{{ $controls   := ne (.Get "controls") "false" }}
+{{ $ratio      := .Get "ratio" | default "4x3" }}  {{/* 16x9, 4x3, 1x1, etc. */}}
+{{ $wrap       := .Get "wrap" | default "true" }}  {{/* Bootstrap wrap option */}}
+{{ $pause      := .Get "pause" | default "hover" }}{{/* hover | false */}}
+
+{{ $imagesCSV  := .Get "images" }}
+{{ $match      := .Get "match" | default "*.jpg" }}
+
+{{/* Build images slice */}}
+{{ $imgs := slice }}
+{{ if $imagesCSV }}
+  {{ range (split $imagesCSV ",") }}
+    {{ $src := trim . " " }}
+    {{ if $src }}{{ $imgs = $imgs | append (dict "src" $src "alt" "") }}{{ end }}
+  {{ end }}
+{{ else }}
+  {{ with .Page }}
+    {{ $res := .Resources.Match $match }}
+    {{ range $res }}
+      {{ $imgs = $imgs | append (dict "src" .RelPermalink "alt" .Name) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $imgs) 0 }}
+<div id="{{ $id }}" class="carousel slide"
+     data-bs-ride="carousel"
+     data-bs-interval="{{ $interval }}"
+     data-bs-pause="{{ $pause }}"
+     data-bs-wrap="{{ $wrap }}">
+  {{ if and $indicators (gt (len $imgs) 1) }}
+  <div class="carousel-indicators">
+    {{ range $i, $_ := $imgs }}
+      <button type="button" data-bs-target="#{{ $id }}" data-bs-slide-to="{{ $i }}" {{ if eq $i 0 }}class="active" aria-current="true"{{ end }} aria-label="Slide {{ add $i 1 }}"></button>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <div class="carousel-inner rounded">
+    {{ range $i, $img := $imgs }}
+      <div class="carousel-item {{ if eq $i 0 }}active{{ end }}">
+        <div class="ratio ratio-{{ $ratio }}">
+          <img src="{{ $img.src }}" class="w-100 h-100" alt="{{ with $img.alt }}{{ . }}{{ else }}Slide {{ add $i 1 }}{{ end }}" loading="lazy" style="object-fit: cover;">
+        </div>
+      </div>
+    {{ end }}
+  </div>
+
+  {{ if and $controls (gt (len $imgs) 1) }}
+  <button class="carousel-control-prev" type="button" data-bs-target="#{{ $id }}" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#{{ $id }}" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  {{ end }}
+</div>
+{{ end }}

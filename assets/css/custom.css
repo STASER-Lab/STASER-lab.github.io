@@ -1,0 +1,6 @@
+/* Make logo in navbar bigger */
+.header .navbar-brand img,
+.navbar-brand img {
+  height: 100px !important; /* adjust to taste */
+  width: auto !important;
+}

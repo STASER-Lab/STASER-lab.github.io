@@ -1,0 +1,12 @@
+{
+  "name": "staser-lab",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.3.7",
+    "bootstrap-print-css": "^1.0.0",
+    "postcss": "^8.5.4",
+    "postcss-cli": "^11.0.0",
+    "autoprefixer": "^10.4.17"
+  }
+}

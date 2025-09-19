@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title/><link>//localhost:1313/es/</link><description>Recent content on</description><generator>Hugo</generator><language>es</language><atom:link href="//localhost:1313/es/index.xml" rel="self" type="application/rss+xml"/><item><title>Footer</title><link>//localhost:1313/es/footer/footer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>//localhost:1313/es/footer/footer/</guid><description/></item><item><title>Inicio</title><link>//localhost:1313/es/home/home/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>//localhost:1313/es/home/home/</guid><description>&lt;section id="sobre-mi" class="section section--border-bottom mt-4">
+ &lt;div class="container">
+ &lt;div class="row align-items-center g-4">
+ &lt;div class="col-12 col-md-7">
+ &lt;h2 class="section__title">Aspectos Socio-Técnicos de la Ingeniería de Software&lt;/h2>
+ &lt;div class="lead">El STASER Lab en UBC Okanagan explora la compleja interacción entre los factores humanos y los sistemas técnicos en el desarrollo de software. Nos enfocamos en entender cómo los factores sociales y técnicos interactúan en los procesos de ingeniería de software. Nuestra investigación aborda preguntas fundamentales sobre cómo trabajan, colaboran y toman decisiones las y los desarrolladores. Colaboramos con la industria y comunidades de código abierto para traducir hallazgos en mejoras prácticas.&lt;/div>
+ 
+ &lt;div class="mt-3">
+&lt;/div>
+ 
+ &lt;/div>
+
+ &lt;div class="col-12 col-md-5">
+ 
+ 
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+&lt;div id="sobre-mi-carousel" class="carousel slide"
+ data-bs-ride="carousel"
+ data-bs-interval="3000"
+ data-bs-pause="hover"
+ data-bs-wrap="true">
+ 
+ &lt;div class="carousel-indicators">
+ 
+ &lt;button type="button" data-bs-target="#sobre-mi-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">&lt;/button>
+ 
+ &lt;button type="button" data-bs-target="#sobre-mi-carousel" data-bs-slide-to="1" aria-label="Slide 2">&lt;/button>
+ 
+ &lt;button type="button" data-bs-target="#sobre-mi-carousel" data-bs-slide-to="2" aria-label="Slide 3">&lt;/button>
+ 
+ &lt;button type="button" data-bs-target="#sobre-mi-carousel" data-bs-slide-to="3" aria-label="Slide 4">&lt;/button>
+ 
+ &lt;/div>
+ 
+
+ &lt;div class="carousel-inner rounded">
+ 
+ &lt;div class="carousel-item active">
+ &lt;div class="ratio ratio-4x3">
+ &lt;img src="//localhost:1313/group-photos/lab-fall-2024-group-photo.jpeg" class="w-100 h-100" alt="Slide 1" loading="lazy" style="object-fit: cover;">
+ &lt;/div>
+ &lt;/div>
+ 
+ &lt;div class="carousel-item ">
+ &lt;div class="ratio ratio-4x3">
+ &lt;img src="//localhost:1313/group-photos/dr.gema-vs-manaal.jpg" class="w-100 h-100" alt="Slide 2" loading="lazy" style="object-fit: cover;">
+ &lt;/div>
+ &lt;/div>
+ 
+ &lt;div class="carousel-item ">
+ &lt;div class="ratio ratio-4x3">
+ &lt;img src="//localhost:1313/group-photos/lab-meet-2025-sept.jpg" class="w-100 h-100" alt="Slide 3" loading="lazy" style="object-fit: cover;">
+ &lt;/div>
+ &lt;/div>
+ 
+ &lt;div class="carousel-item ">
+ &lt;div class="ratio ratio-4x3">
+ &lt;img src="//localhost:1313/group-photos/staser-lab-banner-two.png" class="w-100 h-100" alt="Slide 4" loading="lazy" style="object-fit: cover;">
+ &lt;/div>
+ &lt;/div>
+ 
+ &lt;/div>
+
+ 
+ &lt;button class="carousel-control-prev" type="button" data-bs-target="#sobre-mi-carousel" data-bs-slide="prev">
+ &lt;span class="carousel-control-prev-icon" aria-hidden="true">&lt;/span>
+ &lt;span class="visually-hidden">Previous&lt;/span>
+ &lt;/button>
+ &lt;button class="carousel-control-next" type="button" data-bs-target="#sobre-mi-carousel" data-bs-slide="next">
+ &lt;span class="carousel-control-next-icon" aria-hidden="true">&lt;/span>
+ &lt;span class="visually-hidden">Next&lt;/span>
+ &lt;/button>
+ 
+&lt;/div>
+
+
+
+ 
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;/section>
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+&lt;section id="investigacion" class="section section--border-bottom rad-animation-group section--padding">
+ &lt;div class="container">
+ &lt;div class="row rad-fade-down">
+ &lt;div class="col-12">
+ 
+ &lt;h2 class="section__title">Proyectos de Investigación&lt;/h2>
+ 
+ 
+ &lt;div class="text-section__content">
+ &lt;p>Nuestro laboratorio investiga varias áreas de la ingeniería de software.&lt;/p></description></item></channel></rss>
