@@ -2,7 +2,7 @@ name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # or 'master' if that's your default
+    branches: [ main ]   # change if your default branch is different
   workflow_dispatch:
 
 permissions:
@@ -36,10 +36,7 @@ jobs:
           hugo-version: '0.128.2'
           extended: true
 
-      # If you prefer to inject baseURL dynamically, uncomment the next line and remove from hugo.toml:
-      # - name: Build
-      #   run: hugo --gc --minify --baseURL "https://staser-lab.github.io/"
-
+      # If you didn't hard-code baseURL in hugo.toml, use this line instead:
       - name: Build
         run: hugo --gc --minify --baseURL "https://staser-lab.github.io/"
 
