@@ -1,0 +1,60 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]   # or 'master' if that's your default
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install npm deps
+        run: npm ci
+
+      - name: Setup Hugo (extended)
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.128.2'
+          extended: true
+
+      # If you prefer to inject baseURL dynamically, uncomment the next line and remove from hugo.toml:
+      # - name: Build
+      #   run: hugo --gc --minify --baseURL "https://staser-lab.github.io/"
+
+      - name: Build
+        run: hugo --gc --minify --baseURL "https://staser-lab.github.io/"
+
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
